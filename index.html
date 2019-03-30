@@ -1,0 +1,86 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="compiled/flipclock.css">
+		<link rel="stylesheet" type="text/css" href="jam.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="font/stylesheet.css">
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+		<script src="compiled/flipclock.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col"></div>
+				<img class="col-5 gambar" src="musisc.png"/>
+				<div class="col"></div>
+				
+			</div>
+			<div class="row">
+				<div class="col "></div>
+				<div class="col-7 col-xs- .col-sm- .col-md- .col-lg-">
+					<div class="clock" ></div>
+				</div>
+				<div class="col col-ctm "></div>
+			</div>
+			<div class="row">
+				<div class="col"></div>
+				<div class="col-7 tulisan">Coming soon</div>
+				<div class="col"></div>	
+			</div>
+			<div class="row">
+				<div class="col"></div>
+				<button type="button" onclick="openNav()" class="btn btn-primary btn-lg col-2" id="peta">Venue</button>
+				<div class="col"></div>
+			</div>
+
+			<!-- The overlay -->
+			<div id="myNav" class="overlay">
+
+				<!-- Button to close the overlay navigation -->
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+				<!-- Overlay content dikasih maps -->
+				<div class="overlay-content">
+					<p>haha</p>
+				</div>
+
+			</div>
+			
+		</div>
+	
+	<div class="message"></div>
+
+	<script type="text/javascript">
+		var clock;
+		
+		/* Open when someone clicks on the span element */
+		function openNav() {
+			document.getElementById("myNav").style.width = "100%";
+		}
+
+		/* Close when someone clicks on the "x" symbol inside the overlay */
+		function closeNav() {
+			document.getElementById("myNav").style.width = "0%";
+		}
+
+		$(document).ready(function() {
+				// Grab the current date
+				var currentDate = new Date();
+				// Set some date in the future. In this case, it's always Jan 1
+				var futureDate  = new Date('April 7, 2019 17:30:00');
+				// Calculate the difference in seconds between the future and current date
+				var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+				// Instantiate a coutdown FlipClock
+				clock = $('.clock').FlipClock(diff, {
+					clockFace: 'DailyCounter',
+					countdown: true
+				});
+		});
+
+	</script>
+	
+	</body>
+</html>
