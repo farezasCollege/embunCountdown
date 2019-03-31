@@ -7,12 +7,13 @@ body{
 
 .gambar{
 	width: 20% ;
-	height: 43%;
+	height: 33%;
 }
 
 .clock{
 	position: relative;
 	margin-top: 8%;
+	margin-left: 13%;
 }
 
 .tulisan{
@@ -25,8 +26,8 @@ body{
 }
 
 .gmaps{
-	width:50%; 
-	height:75%;
+	width:70% !important; 
+	height:75% !important;
 	frameborder:0; 
 	border:0;
 }
@@ -49,11 +50,11 @@ body{
 /* Position the content inside the overlay */
 .overlay-content {
   position: relative;
-  top: 15%; /* 25% from the top */
+  top: 12%; 
   width: 100%;  100% width 
   text-align: center; /* Centered text/links */
   margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
-  margin-left: 30%;
+  margin-left: 14%;
 }
 
 /* The navigation links inside the overlay */
@@ -80,7 +81,7 @@ body{
 }
 
 
-@media(min-width: 1px) and (max-width: 575px){
+@media(min-width: 320px) and (max-width: 575px){
 	.clock{
 		zoom:0.56;
 		-moz-transform: scale(0.56);
@@ -94,17 +95,20 @@ body{
 	}
 
 	.gambar{
-		/*zoom:0.24;
-		-moz-transform: scale(0.24);*/
+		zoom:0.44;
+		-moz-transform: scale(0.44);
+	}
 
+	.gmaps{
+		width:90%; 
+		height:70%;
 	}
 }
 
 @media(min-width: 576px) and (max-width: 767px){
 	.clock{
-		zoom:0.44;
-		-moz-transform: scale(0.44);
-		display: inline !important;
+		zoom:0.54;
+		-moz-transform: scale(0.54);
 	}
 
 	.tulisan{
@@ -116,6 +120,10 @@ body{
 		zoom:0.44;
 		-moz-transform: scale(0.44);
 	}
+
+	.gmaps{
+	width:70%; 
+	height:70%;}
 }
 
 @media(min-width: 768px) and (max-width: 991px) {
@@ -133,6 +141,10 @@ body{
 		zoom:0.61;
 		-moz-transform: scale(0.61);
 	}
+
+	.gmaps{
+	width:70%; 
+	height:70%;}
 }
 
 @-webkit-keyframes colorchange {
@@ -167,6 +179,10 @@ body{
 		zoom:0.80;
 		-moz-transform: scale(0.80);
 	}
+
+	.gmaps{
+	width:70%; 
+	height:70%;}
 }
 
 
