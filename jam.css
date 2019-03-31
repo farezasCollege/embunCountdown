@@ -24,8 +24,11 @@ body{
 	-webkit-animation:colorchange 5s infinite alternate;
 }
 
-#peta{
-	margin-top: 2%;
+.gmaps{
+	width:50%; 
+	height:75%;
+	frameborder:0; 
+	border:0;
 }
 
 /* The Overlay (background) */
@@ -34,7 +37,7 @@ body{
   height: 100%;
   width: 0;
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 5; /* Sit on top */
   left: 0;
   top: 0;
   background-color: rgb(0,0,0); /* Black fallback color */
@@ -46,10 +49,11 @@ body{
 /* Position the content inside the overlay */
 .overlay-content {
   position: relative;
-  top: 25%; /* 25% from the top */
-  width: 100%; /* 100% width */
+  top: 15%; /* 25% from the top */
+  width: 100%;  100% width 
   text-align: center; /* Centered text/links */
   margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  margin-left: 30%;
 }
 
 /* The navigation links inside the overlay */
@@ -76,10 +80,31 @@ body{
 }
 
 
+@media(min-width: 1px) and (max-width: 575px){
+	.clock{
+		zoom:0.56;
+		-moz-transform: scale(0.56);
+		-webkit-transform: scale(0.56);
+	}
+
+	.tulisan{
+		zoom:0.44;
+		-moz-transform: scale(0.44);
+		-webkit-transform: scale(0.56);
+	}
+
+	.gambar{
+		/*zoom:0.24;
+		-moz-transform: scale(0.24);*/
+
+	}
+}
+
 @media(min-width: 576px) and (max-width: 767px){
 	.clock{
 		zoom:0.44;
 		-moz-transform: scale(0.44);
+		display: inline !important;
 	}
 
 	.tulisan{

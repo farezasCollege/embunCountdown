@@ -1,8 +1,6 @@
 <html>
 	<head>
-		<title>Thunderverse</title>
-		<meta charset="utf-8">
-    		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>thunderverse</title>
 		<link rel="stylesheet" href="compiled/flipclock.css">
 		<link rel="stylesheet" type="text/css" href="jam.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -17,15 +15,13 @@
 		<div class="container">
 			<div class="row">
 				<div class="col"></div>
-				<img class="col-5 gambar" src="musisc.png"/>
+				<img class="col-7 gambar" src="musisc.png"/>
 				<div class="col"></div>
 				
 			</div>
 			<div class="row">
 				<div class="col "></div>
-				<div class="col-7 col-xs- .col-sm- .col-md- .col-lg-">
-					<div class="clock" ></div>
-				</div>
+				<div class="col-7 col-xs-12 .col-sm-12 .col-md-12 .col-lg- clock" id="jam"></div>
 				<div class="col col-ctm "></div>
 			</div>
 			<div class="row">
@@ -47,7 +43,7 @@
 
 				<!-- Overlay content dikasih maps -->
 				<div class="overlay-content">
-					<p>haha</p>
+					<iframe class="gmaps" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d7920.537966457894!2d107.62816127348268!3d-6.9775562298370755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x2e68e9adaf2f99a3%3A0xaefd20f00bdb096d!2sTelkom+University+Convention+Hall%2C+Jalan+Sukapura%2C+Sukapura%2C+Bandung%2C+West+Java!3m2!1d-6.9716318!2d107.6310429!4m5!1s0x2e68e96e08aaf9a7%3A0xe0a2fe08896f67c3!2sEl+Cafe%2C+Jl.+Raya+Bojongsoang+No.21%2C+Citeureup%2C+Dayeuhkolot%2C+Bandung%2C+Jawa+Barat+40257!3m2!1d-6.9843519!2d107.6300036!5e0!3m2!1sen!2sid!4v1554014478336!5m2!1sen!2sid" allowfullscreen></iframe>
 				</div>
 
 			</div>
@@ -58,16 +54,19 @@
 
 	<script type="text/javascript">
 		var clock;
-		
-		/* Open when someone clicks on the span element */
+	/* Open when someone clicks on the span element */
 		function openNav() {
 			document.getElementById("myNav").style.width = "100%";
 		}
 
-		/* Close when someone clicks on the "x" symbol inside the overlay */
+		// Close when someone clicks on the "x" symbol inside the overlay 
 		function closeNav() {
 			document.getElementById("myNav").style.width = "0%";
-		}
+		}		
+	
+		// function openMap(){
+		// 	window.open("https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d7920.537966457894!2d107.62816127348268!3d-6.9775562298370755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x2e68e9adaf2f99a3%3A0xaefd20f00bdb096d!2sTelkom+University+Convention+Hall%2C+Jalan+Sukapura%2C+Sukapura%2C+Bandung%2C+West+Java!3m2!1d-6.9716318!2d107.6310429!4m5!1s0x2e68e96e08aaf9a7%3A0xe0a2fe08896f67c3!2sEl+Cafe%2C+Jl.+Raya+Bojongsoang+No.21%2C+Citeureup%2C+Dayeuhkolot%2C+Bandung%2C+Jawa+Barat+40257!3m2!1d-6.9843519!2d107.6300036!5e0!3m2!1sen!2sid!4v1554014478336!5m2!1sen!2sid");
+		// }
 
 		$(document).ready(function() {
 				// Grab the current date
